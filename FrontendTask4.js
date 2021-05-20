@@ -43,8 +43,8 @@ function convertFahrToCelsius(num) {
         return `{${Object.keys(num)} : ${Object.values(num)}} is not a valid number but an ${typeof num}`
     }
 
-    let convertToFahrenheit = (num * 1.8) + 32;
-    let fixedFahr = convertToFahrenheit.toFixed(4);
-    return `${fixedFahr}°F`;
+    let convertToCelsius = (num - 32) * 5 / 9;
+    let fixedFahr = convertToCelsius.toFixed(4);
+    return `${fixedFahr}°C`;
 }
 
